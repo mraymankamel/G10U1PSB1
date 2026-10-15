@@ -666,11 +666,8 @@ function initQuizData() {
         let correctText = item.options[item.answer];
         shuffleArray(item.options); 
         
-        let customExp = item.exp || "";
-        if (!customExp) {
-            customExp = `<div class='exp-en'>💡 <b>Explanation:</b> ${item.rule || "Grammar Rule"}</div>`;
-            if(item.zatona) customExp += `<div class='exp-separator'></div><div class='exp-ar'>✨ <b>الزتونة:</b> ${item.zatona}</div>`;
-        }
+        let customExp = `<div class='exp-en'>💡 <b>Explanation:</b> ${item.rule || "Grammar Rule"}</div>`;
+        if(item.zatona) customExp += `<div class='exp-separator'></div><div class='exp-ar'>✨ <b>الزتونة:</b> ${item.zatona}</div>`;
 
         return { 
             rule: item.rule || "Grammar Rule", 
